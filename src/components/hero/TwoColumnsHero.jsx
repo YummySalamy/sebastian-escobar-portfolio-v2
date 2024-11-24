@@ -1,5 +1,5 @@
 import React from "react";
-import ColumnImage from './assets/images/web2-column-image.jpg';
+import ColumnImage from './assets/images/web2-column-image.webp';
 import './assets/styles/Hero.css';
 
 const TwoColumnsHero = ({
@@ -15,7 +15,7 @@ const TwoColumnsHero = ({
                 <p className="two-columns-hero__subtitle">{subtitle}</p>
             </div>
             <div className="two-columns-hero__image">
-                <img src={image} alt={imageAlt} />
+                <img src={image} alt={imageAlt} preload="true" />
             </div>
         </section>
     )
