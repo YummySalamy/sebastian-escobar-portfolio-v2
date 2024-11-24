@@ -1,10 +1,11 @@
 import React from "react";
+import ColumnImage from './assets/images/web2-column-image.jpg';
 import './assets/styles/Hero.css';
 
 const TwoColumnsHero = ({
     title = 'default title',
     subtitle = 'default subtitle',
-    image= 'https://4kwallpapers.com/images/wallpapers/macos-monterey-stock-black-dark-mode-layers-5k-3840x2160-5889.jpg',
+    image= ColumnImage,
     imageAlt= 'alt image'
 }) => {
     return (
