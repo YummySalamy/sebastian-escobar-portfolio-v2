@@ -18,9 +18,9 @@ const NotFound = ({
                 <h1>404</h1>
                 <h2>Page Not Found</h2>
                 <p>{message}</p>
-                <Link to="/">
-                    <button>Go back to the homepage</button>
-                </Link>
+                <button
+                    onClick={() => window.history.back()}
+                >Go back to previous page</button>
             </div>
         </PageContainer>
     )
