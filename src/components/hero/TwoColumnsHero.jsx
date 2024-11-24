@@ -6,7 +6,7 @@ const TwoColumnsHero = ({
     title = 'default title',
     subtitle = 'default subtitle',
     image= ColumnImage,
-    imageAlt= 'alt image'
+    imageAlt= 'sebastian-escobar-banner'
 }) => {
     return (
         <section className="two-columns-hero">
