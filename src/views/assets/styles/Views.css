@@ -4,6 +4,18 @@
     animation: fadeIn 1s;
 }
 
+.projects {
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1s;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1s;
+}
+
 .not-found {
     display: flex;
     flex-direction: column;

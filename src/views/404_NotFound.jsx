@@ -1,12 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./assets/styles/Views.css";
 import PageContainer from "../components/general/PageContainer";
 
 const NotFound = ({
     title = "404",
     description = "Page Not Found",
-    message = "Sorry, the page you are looking for does not exist."
+    message = "Sorry, the page you are looking for does not exist. Maybe I'm still working on it, or it has been moved to another location."
 }) => {
 
     return (

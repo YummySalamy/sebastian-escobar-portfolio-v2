@@ -12,11 +12,20 @@ import EclipseImage from '../assets/mockups/eclipse-mockup.png';
 import RetroModernMaketPlaceImage from '../assets/mockups/retromodern-marketplace-mockup.png';
 import DataPathImage from '../assets/mockups/datapath-e-learning-mockup1.png';
 import DataPathSecondImage from '../assets/mockups/datapath-e-learning-mockup2.png';
+import DataPathLandingImage from '../assets/mockups/datapath-landing-mockup.jpeg';
 import JewerlyShopImage from '../assets/mockups/jewerly-shop-mockup.jpg';
 
 const projects = [
     {
-        id: 1,
+        id: 10,
+        title: 'Datapath Web',
+        description: 'A web application that showcases various tech courses. It is a platform for learning and testing.',
+        techs: [<FaReact />, <SiCss3 />, <SiJavascript />, <SiFirebase />, <SiGooglecloud />, <DiMysql />],
+        path: 'https://datapath.ai',
+        image: DataPathLandingImage,
+    },
+    {
+        id: 2,
         title: 'Fresh Place',
         description: 'A web application of a company distributing fresh groceries.',
         path: 'https://fresh-place.com',
@@ -24,7 +33,7 @@ const projects = [
         image: FreshPlaceImage,
     },
     {
-        id: 2,
+        id: 3,
         title: 'SIRIUS',
         description: 'A muti-platform application for physics studies and simulations.',
         path: 'https://github.com/jesusckantillo/expofisica-front/tree/dev_yummy',
@@ -32,7 +41,7 @@ const projects = [
         image: SiriusImage,
     },
     {
-        id: 3,
+        id: 4,
         title: 'AI Image Classifier',
         description: 'A Python application that uses machine learning to classify images.',
         path: 'https://github.com/YummySalamy/Image_classifier',
@@ -41,7 +50,7 @@ const projects = [
     },
     
     {
-        id: 4,
+        id: 5,
         title: 'nubot.io',
         description: 'A web application that allows users to auto-manage their companies with AI.',
         path: 'https://nubot.io',
@@ -49,7 +58,7 @@ const projects = [
         image: NubotImage,
     },
     {
-        id: 5,
+        id: 6,
         title: 'RetroModern Marketplace',
         description: 'A web applicaction that allows users to buy and sell retro and modern items.',
         path: 'https://retromodern-market-place.vercel.app/',
@@ -57,7 +66,7 @@ const projects = [
         image: RetroModernMaketPlaceImage,
     },
     {
-        id: 6,
+        id: 7,
         title: 'Datapath e-learning',
         description: 'A web application that showcases various tech courses.',
         path: 'https://datapath-e-learning-tests.vercel.app/',
@@ -66,15 +75,15 @@ const projects = [
         second_image: DataPathSecondImage,
     },
     {
-        id: 7,
-        title: 'Jewerly Shop Landing Page',
+        id: 8,
+        title: 'Jewerly Shop Landing',
         description: 'A minimalistic landing page for a jewerly shop.',
         path: 'https://jewerly-shop-landing.vercel.app/',
         techs: [<FaReact />, <SiCss3 />, <SiJavascript />],
         image: JewerlyShopImage,
     },
     {
-        id: 8,
+        id: 9,
         title: 'Aurora',
         description: 'Coming soon.',
         techs: [<FaReact />, <SiCss3 />, <SiJavascript />],
@@ -82,7 +91,7 @@ const projects = [
         image: Aurora,
     },
     {
-        id: 9,
+        id: 10,
         title: 'Eclipse',
         description: 'A web application that is designed to be a an all-in-one platform administrator.',
         techs: [<FaNodeJs />, <SiFirebase />, <SiGooglecloud />, <DiMysql />, <FaWhatsapp />],

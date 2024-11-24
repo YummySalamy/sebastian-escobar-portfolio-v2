@@ -9,12 +9,15 @@ const Card = ({
     button,
     buttonAction,
     buttonProps,
+    children,
+    addStyles
 }) => {
     return (
-        <div className="card">
+        <div className="card" style={addStyles}>
             { image && <img src={image} alt={title} /> }
-            <h2>{title}</h2>
-            <p>{description}</p>
+            {title && <h2>{title}</h2>}
+            {children}
+            {description && <p>{description}</p>}
             { techs && 
                 <div className='card-techs-container'>
                     {techs.map((tech, index) => <span key={index}>{tech}</span>)}

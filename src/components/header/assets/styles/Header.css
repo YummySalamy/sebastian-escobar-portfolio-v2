@@ -56,11 +56,16 @@
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
-  }
-  
-  .nav-list a:hover {
+}
+
+.nav-list a.active {
     color: var(--primary-color);
-  }
+    font-weight: bold;
+}
+
+.nav-list a:hover {
+    color: var(--primary-color);
+}
   
   /* CTA Button styles */
   .cta-button .btn {
@@ -77,6 +82,7 @@
   
   .cta-button .btn:hover {
     background-color: var(--primary-color);
+    color: var(--btn-bg-color);
     transform: scale(1.05);
   }
   

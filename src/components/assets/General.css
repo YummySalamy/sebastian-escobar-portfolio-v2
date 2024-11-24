@@ -19,9 +19,11 @@
     border-radius: 1em;
     background-color: var(--bg-color);
     color: var(--text-color);
-    transition: transform 300ms;
+    transition: all 300ms;
     text-align: center;
     margin: auto;
+    min-width: 300px;
+    max-height: 400px;
   }
   
   .card-techs-container {
@@ -169,7 +171,7 @@
   }
   
   .tech:hover {
-    color: #646cff;
+    color: var(--primary-color);
     transform: scale(1.5);
   
   }
@@ -245,7 +247,7 @@
     width: 100%;
     max-width: 400px;
     border-radius: 1em;
-    box-shadow: 0 0 2em #646cffaa;
+    box-shadow: 0 0 2em var(--primary-color);
   }
   
   .second_image {
@@ -253,4 +255,24 @@
       display: none;
       
     }
+  }
+
+  .techs-used {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    margin: 2em 0;
+    padding: 2em;
+  }
+
+  .download-cv {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-note {
+    padding-bottom: 2rem;
   }

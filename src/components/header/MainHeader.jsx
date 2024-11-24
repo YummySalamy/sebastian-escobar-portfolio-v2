@@ -4,13 +4,18 @@ import { FaSun, FaMoon, FaBars } from "react-icons/fa";
 import "./assets/styles/Header.css";
 
 const Header = () => {
-    const [currentPath, setCurrentPath] = useState(window.location.pathname);
-    const [isDarkTheme, setIsDarkTheme] = useState(
-        () => localStorage.getItem("theme") === "dark"
-    );
+    const navItems = [
+        { name: "About", path: "/" },
+        { name: "Projects", path: "/projects" },
+        { name: "Contact", path: "/contact" },
+    ];
+
+    const [isDarkTheme, setIsDarkTheme] = useState(() => localStorage.getItem("theme") === "dark");
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
     useEffect(() => {
+        // Apply theme changes to the body
         document.body.classList.toggle("dark-theme", isDarkTheme);
         localStorage.setItem("theme", isDarkTheme ? "dark" : "light");
     }, [isDarkTheme]);
@@ -21,12 +26,13 @@ const Header = () => {
             setIsMenuOpen(false);
         };
 
+        // Listen for URL changes
         window.addEventListener("popstate", handleRouteChange);
 
         return () => {
             window.removeEventListener("popstate", handleRouteChange);
         };
-    }, [currentPath]);
+    }, []);
 
     const toggleTheme = () => {
         setIsDarkTheme((prevTheme) => !prevTheme);
@@ -38,41 +44,43 @@ const Header = () => {
 
     return (
         <header className="header">
-        {/* Theme Switch */}
-        <div className="theme-switch">
-            <button className="theme-toggle" onClick={toggleTheme}>
-            {isDarkTheme ? <FaSun className="icon sun" /> : <FaMoon className="icon moon" />}
+            {/* Theme Switch */}
+            <div className="theme-switch">
+                <button className="theme-toggle" onClick={toggleTheme}>
+                    {isDarkTheme ? <FaSun className="icon sun" /> : <FaMoon className="icon moon" />}
+                </button>
+            </div>
+
+            {/* Hamburger Icon */}
+            <button className="hamburger" onClick={toggleMenu}>
+                <FaBars className="icon" />
             </button>
-        </div>
 
-        {/* Hamburger Icon */}
-        <button className="hamburger" onClick={toggleMenu}>
-            <FaBars className="icon" />
-        </button>
+            {/* Navigation */}
+            <nav className={`nav ${isMenuOpen ? "open" : ""}`}>
+                <ul className="nav-list">
+                    {navItems.map((item) => (
+                        <li key={item.path}>
+                            <Link
+                                to={item.path}
+                                onClick={() => setIsMenuOpen(false)}
+                                className={currentPath === item.path ? "active" : ""}
+                            >
+                                {item.name}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </nav>
 
-        {/* Navigation */}
-        <nav className={`nav ${isMenuOpen ? "open" : ""}`}>
-            <ul className="nav-list">
-            <li>
-                <Link to="/" onClick={() => setIsMenuOpen(false)}>About</Link>
-            </li>
-            <li>
-                <Link to="/projects" onClick={() => setIsMenuOpen(false)}>Projects</Link>
-            </li>
-            <li>
-                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
-            </li>
-            </ul>
-        </nav>
-
-        {/* CTA Button */}
-        <div className="cta-button">
-            <a href="#hire-me" className="btn">
-            Hire Me
-            </a>
-        </div>
+            {/* CTA Button */}
+            <div className="cta-button">
+                <a href="/contact" className="btn">
+                    Hire Me
+                </a>
+            </div>
         </header>
-  );
+    );
 };
 
 export default Header;
