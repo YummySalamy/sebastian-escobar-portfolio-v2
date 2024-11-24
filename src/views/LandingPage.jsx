@@ -11,7 +11,7 @@ const LandingPage = () => {
 
     return (
         <PageContainer
-            title="Sebastian's Portfolio"
+            title="About Sebastian's Portfolio"
             description="Get to know Sebastian's work and projects."
             image="https://4kwallpapers.com/images/wallpapers/macos-monterey-stock-black-dark-mode-layers-5k-3840x2160-5889.jpg"
             url="https://sebastian-escobar-portfolio-v2.vercel.app/"
