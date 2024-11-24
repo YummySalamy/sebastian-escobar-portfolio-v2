@@ -14,6 +14,8 @@ import DataPathImage from '../assets/mockups/datapath-e-learning-mockup1.png';
 import DataPathSecondImage from '../assets/mockups/datapath-e-learning-mockup2.png';
 import DataPathLandingImage from '../assets/mockups/datapath-landing-mockup.jpeg';
 import JewerlyShopImage from '../assets/mockups/jewerly-shop-mockup.jpg';
+import SiriusLandigPageImage from '../assets/mockups/sirius-landing-page-mockup1.png';
+import SiriusLandigPageSecondImage from '../assets/mockups/sirius-landing-page-mockup2.png';
 
 const projects = [
     {
@@ -56,6 +58,14 @@ const projects = [
         path: 'https://nubot.io',
         techs: [<FaReact />, <FaNodeJs/>,  <FaPython />, <SiFirebase />, <SiGooglecloud />, <SiTensorflow />, <SiTailwindcss />, <SiCss3 />],
         image: NubotImage,
+    },
+    {
+        title: 'SIRIUS Landing Page',
+        description: 'The official landing page for the SIRIUS project.',
+        path: 'https://sirius-landing-page.vercel.app/',
+        techs: [<FaReact />, <SiCss3 />, <SiJavascript />],
+        image: SiriusLandigPageImage,
+        second_image: SiriusLandigPageSecondImage,
     },
     {
         id: 6,
