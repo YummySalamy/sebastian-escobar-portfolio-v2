@@ -1,0 +1,112 @@
+/* General header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-bottom: 1px solid var(--secondary-color);
+  }
+  
+  /* Theme switch styles */
+  .theme-switch {
+    display: flex;
+    align-items: center;
+  }
+  
+  .theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+  }
+  
+  .theme-toggle:hover {
+    background-color: var(--secondary-color);
+    color: var(--btn-text-color);
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .sun {
+    color: #f1c40f;
+    /* animation: fadeIn 1s ease; */
+  }
+
+  .moon {
+    color: #333;
+    /* animation: slideInFromLeft 1s ease; */
+  }
+  
+  /* Navigation styles */
+  .nav-list {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-list a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-list a:hover {
+    color: var(--primary-color);
+  }
+  
+  /* CTA Button styles */
+  .cta-button .btn {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border-radius: 30px;
+    background-color: var(--btn-bg-color);
+    color: var(--btn-text-color);
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .cta-button .btn:hover {
+    background-color: var(--primary-color);
+    color: var(--btn-bg-color);
+    transform: scale(1.05);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .nav-list {
+      display: none; /* Hide navigation in small screens */
+    }
+  
+    .header {
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .theme-toggle {
+      font-size: 1.2rem;
+    }
+  
+    .cta-button .btn {
+      padding: 0.5em 0.8em;
+      font-size: 0.9rem;
+    }
+  }
+
+  @keyframes shadowAura {
+    0% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+    }
+    100% {
+      box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+  

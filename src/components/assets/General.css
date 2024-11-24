@@ -1,0 +1,256 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2em;
+    margin: 2em 0;
+    @media screen and (max-width: 768px){
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    gap: 1em;
+    padding: 2em;
+    border: 2px solid var(--secondary-color);
+    border-radius: 1em;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: transform 300ms;
+    text-align: center;
+    margin: auto;
+  }
+  
+  .card-techs-container {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 2em #646cffaa;
+  }
+  
+  .read-the-docs {
+    color: #888;
+  }
+  
+  .full-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+  
+  .layout-left-slide-button {
+    position: fixed;
+    top: 50%;
+    left: 1em;
+    transform: translateY(-50%);
+    box-shadow: 0 0 2em #646cffaa;
+    transition: all 300ms;
+    cursor: pointer;
+    &:hover {
+      border: 2px solid #646cff;
+    }
+  }
+  
+  .layout-right-slide-button {
+    position: fixed;
+    top: 50%;
+    right: 1em;
+    transform: translateY(-50%);
+    box-shadow: 0 0 2em #646cffaa;
+    transition: all 300ms;
+    cursor: pointer;
+    &:hover {
+      border: 2px solid #646cff;
+    }
+  }
+  
+  .header-container {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 0.5em;
+    gap: 2em;
+    top: 0;
+    z-index: 999;
+    transition: background-color 300ms;
+  }
+  
+  .header-list {
+    display: flex;
+    gap: 2em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .hero-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+    margin: 2em 0;
+  }
+  
+  .hero-container h1 {
+    max-width: 600px;
+    font-size: 3.2em;
+    line-height: 1.1;
+  }
+  
+  .hero-container p {
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .hero-container a {
+    font-weight: 500;
+    color: white;
+    text-decoration: inherit;
+    transition: color 4s;
+    &:hover {
+      color: white;
+    }
+  }
+  
+  .hero-left-column {
+    display: flex;
+    margin-right: 80px;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    @media screen and (max-width: 768px){
+      margin-right: 0;
+    }
+  }
+  
+  .hero-right-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    @media screen and (max-width: 768px){
+      display: none;
+    }
+  }
+  
+  .hero-right-column img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 1em;
+    box-shadow: 0 0 2em #646cffaa;
+  }
+  
+  .techs-container {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin: 2em 0;
+    animation: fadeIn 6s ease;
+  }
+  
+  .tech {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    font-size: 1.5em;
+    transition: color 300ms, transform 300ms;
+    cursor: pointer;
+  }
+  
+  .tech:hover {
+    color: #646cff;
+    transform: scale(1.5);
+  
+  }
+  
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    margin: 2em 0;
+  }
+  
+  .contact-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+  
+  .resume-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+  
+  .resume-buttons {
+    display: flex;
+    gap: 1em;
+  }
+  
+  .resume a {
+    font-weight: 500;
+    color: #d987d7;
+    text-decoration: inherit;
+    transition: color 4s;
+  }
+  
+  .inspected-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2d2d2d;
+    z-index: 999;
+    animation: fadeIn 0.4s ease;
+    transition: opacity 300ms;
+    height: 100%;
+    overflow-y: auto;
+  }
+  
+  .images-container {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    @media screen and (max-width: 768px){
+      flex-direction: column;
+  
+    }
+  }
+  
+  .buttons-container {
+    display: flex;
+    gap: 1em;
+  }
+  
+  .inspected-container img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 1em;
+    box-shadow: 0 0 2em #646cffaa;
+  }
+  
+  .second_image {
+    @media screen and (max-width: 768px){
+      display: none;
+      
+    }
+  }

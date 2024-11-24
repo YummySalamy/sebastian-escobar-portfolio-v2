@@ -1,0 +1,15 @@
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1s;
+}
+
+.not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    height: 100%;
+}
