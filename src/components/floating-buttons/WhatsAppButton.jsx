@@ -9,6 +9,8 @@ const WhatsAppButton = () => {
             <button
                 className="floating-button "
                 onClick={() => handleOpenWhatsapp({ message: "Hello, I'm interested in your services." })}
+                title="Contact me via WhatsApp"
+                aria-label="Contact me via WhatsApp"
             >
                 <FaWhatsapp className="whatsapp" />
             </button>

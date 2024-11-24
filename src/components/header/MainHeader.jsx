@@ -46,13 +46,13 @@ const Header = () => {
         <header className="header">
             {/* Theme Switch */}
             <div className="theme-switch">
-                <button className="theme-toggle" onClick={toggleTheme}>
+                <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle Theme" title="Toggle Theme">
                     {isDarkTheme ? <FaSun className="icon sun" /> : <FaMoon className="icon moon" />}
                 </button>
             </div>
 
             {/* Hamburger Icon */}
-            <button className="hamburger" onClick={toggleMenu}>
+            <button className="hamburger" onClick={toggleMenu} aria-label="Menu" title="Menu">
                 <FaBars className="icon" />
             </button>
 
