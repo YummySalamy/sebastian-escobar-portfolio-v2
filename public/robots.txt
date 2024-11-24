@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: sebastian-escobar-portfolio-v2.vercel.app/sitemap.xml
